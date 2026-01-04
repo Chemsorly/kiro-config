@@ -1,7 +1,3 @@
----
-inclusion: manual
----
-
 # Debugging Workflow
 ## Purpose
 Defines the sequence for debugging issues and failures.

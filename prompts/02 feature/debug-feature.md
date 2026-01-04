@@ -1,4 +1,4 @@
-Activate the power "kiro-config" if not already done. We need to debug an issue with a feature. The issue description will be at the end of the prompt. Follow the debugging workflow to analyze and fix the problem.
+Activate the power "kiro-config" if not already done. Ensure all steering documents of the power are loaded. We need to debug an issue with a feature. The issue description will be at the end of the prompt. Follow the debugging workflow to analyze and fix the problem.
 
 #debugging-workflow
 

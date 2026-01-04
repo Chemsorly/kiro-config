@@ -1,4 +1,4 @@
-Activate the power "kiro-config" if not already done. Analyze this repository to build context for the current session.
+Activate the power "kiro-config" if not already done. Ensure all steering documents of the power are loaded. Analyze this repository to build context for the current session.
 
 #memories
 

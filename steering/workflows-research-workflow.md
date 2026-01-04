@@ -1,7 +1,3 @@
----
-inclusion: manual
----
-
 # Research Workflow
 ## Purpose
 Defines the sequence for researching packages, libraries, and implementation approaches.

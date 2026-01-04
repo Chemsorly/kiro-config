@@ -1,7 +1,3 @@
----
-inclusion: manual
----
-
 # Implementation Workflow
 ## Purpose
 Defines the sequence for implementing features after research is complete.
