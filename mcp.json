@@ -1,0 +1,45 @@
+{
+  "mcpServers": {
+    "web-search": {
+      "command": "docker",
+      "disabled": false,
+      "args": [
+        "run",
+        "-i",
+        "--rm",
+        "mcp/duckduckgo"
+      ],
+      "autoApprove": [
+        "search",
+        "fetch_content"
+      ]
+    },
+    "context7": {
+      "command": "docker",
+      "disabled": false,
+      "args": [
+        "run",
+        "-i",
+        "--rm",
+        "docker.io/acuvity/mcp-server-context-7"
+      ],
+      "autoApprove": [
+        "resolve-library-id",
+        "get-library-docs"
+      ]
+    },
+    "sequential-thinking": {
+      "command": "docker",
+      "disabled": false,
+      "args": [
+        "run",
+        "-i",
+        "--rm",
+        "mcp/sequentialthinking"
+      ],
+      "autoApprove": [
+        "sequentialthinking"
+      ]
+    }
+  }
+}
