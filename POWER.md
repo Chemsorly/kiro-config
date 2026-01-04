@@ -26,8 +26,8 @@ I'll create and maintain project memory files in `.kiro/steering/project/`:
 
 ### 2. Prompt Templates
 I'll fetch and copy prompt templates from the GitHub repository to your workspace's `.kiro/prompts/` directory:
-- Fetch all prompt files from: `https://github.com/chemsorly/kiro-config/tree/main/prompts/`
-- Use raw GitHub URLs to download each file:
+- Use the `fetch_content` tool from the web-search MCP server to download each file
+- Fetch all prompt files using raw GitHub URLs:
   - `https://raw.githubusercontent.com/chemsorly/kiro-config/main/prompts/01%20intro/analyze-repository.md`
   - `https://raw.githubusercontent.com/chemsorly/kiro-config/main/prompts/02%20feature/research-feature.md`
   - `https://raw.githubusercontent.com/chemsorly/kiro-config/main/prompts/02%20feature/plan-feature.md`
@@ -35,8 +35,10 @@ I'll fetch and copy prompt templates from the GitHub repository to your workspac
   - `https://raw.githubusercontent.com/chemsorly/kiro-config/main/prompts/02%20feature/debug-feature.md`
   - `https://raw.githubusercontent.com/chemsorly/kiro-config/main/prompts/03%20validation/check-acceptance-criteria.md`
   - `https://raw.githubusercontent.com/chemsorly/kiro-config/main/prompts/04%20cleanup/cleanup-after-feature.md`
-- Create the directory structure and save each file with its original content
-- Use web-search tool to fetch the raw content from GitHub
+- Create the directory structure (`.kiro/prompts/01 intro/`, `.kiro/prompts/02 feature/`, etc.)
+- IMPORTANT: The `fetch_content` tool omits line breaks from the content
+- When writing files, add appropriate line breaks between paragraphs and sections to restore proper formatting
+- Ensure the files are readable with proper paragraph separation
 
 ### 3. Quality Gates
 All development follows strict quality criteria:
@@ -137,7 +139,7 @@ Every implementation includes:
 
 This power will automatically:
 1. Configure MCP servers for web search, documentation, and thinking tools
-2. Fetch all prompt template files from GitHub (`https://github.com/chemsorly/kiro-config/tree/main/prompts/`) and copy them to `.kiro/prompts/` in your workspace
+2. Fetch all prompt template files from GitHub using the `fetch_content` tool and copy them to `.kiro/prompts/` in your workspace
 3. Create project memory files in `.kiro/steering/project/`
 4. Load comprehensive steering rules for .NET development
 5. Enable structured workflows and quality gates

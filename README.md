@@ -29,13 +29,13 @@ When you install this power, it automatically:
    - Context7 documentation lookup
    - Sequential thinking for complex problems
 
-2. **Fetches Prompt Templates** from GitHub and copies them to `.kiro/prompts/` in your workspace:
-   - Downloads all prompt files from `https://github.com/chemsorly/kiro-config/tree/main/prompts/`
+2. **Fetches Prompt Templates** from GitHub using the `fetch_content` tool and copies them to `.kiro/prompts/` in your workspace:
+   - Downloads all prompt files from raw GitHub URLs
    - Repository analysis prompts from `01 intro/`
    - Feature development workflows from `02 feature/` (research, plan, implement, debug)
    - Validation prompts from `03 validation/`
    - Cleanup prompts from `04 cleanup/`
-   - Preserves the exact directory structure
+   - Adds line breaks to restore proper formatting (fetch_content omits them)
 
 3. **Creates Project Memory Files** (in `.kiro/steering/project/`):
    - `memories.md` - Development history and decisions
