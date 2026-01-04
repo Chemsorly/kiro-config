@@ -41,10 +41,12 @@ When you install this power, it automatically:
    - Context7 documentation lookup
    - Sequential thinking for complex problems
 
-2. **Copies Prompt Templates** to `.kiro/prompts/`:
-   - Repository analysis prompts
-   - Feature development workflows (research, plan, implement, debug)
-   - Validation and cleanup prompts
+2. **Copies Prompt Templates** from the power's `prompts/` directory to `.kiro/prompts/` in your workspace:
+   - All repository analysis prompts from `prompts/01 intro/`
+   - All feature development workflows from `prompts/02 feature/` (research, plan, implement, debug)
+   - All validation prompts from `prompts/03 validation/`
+   - All cleanup prompts from `prompts/04 cleanup/`
+   - Preserves the exact directory structure
 
 3. **Creates Project Memory Files** (in `.kiro/steering/project/`):
    - `memories.md` - Development history and decisions

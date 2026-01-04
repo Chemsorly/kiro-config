@@ -25,10 +25,12 @@ I'll create and maintain project memory files in `.kiro/steering/project/`:
 - `scratchpad.md` - Current session tracking
 
 ### 2. Prompt Templates
-I'll copy structured prompt templates to `.kiro/prompts/` for easy access:
-- Repository analysis prompts
-- Feature development workflows (research, plan, implement, debug)
-- Validation and cleanup prompts
+I'll copy the existing prompt templates from this power's `prompts/` directory to your workspace's `.kiro/prompts/` directory:
+- Copy all files from `prompts/01 intro/` (analyze-repository.md)
+- Copy all files from `prompts/02 feature/` (research-feature.md, plan-feature.md, implement-feature.md, debug-feature.md)
+- Copy all files from `prompts/03 validation/` (check-acceptance-criteria.md)
+- Copy all files from `prompts/04 cleanup/` (cleanup-after-feature.md)
+- Preserve the directory structure exactly as it exists in the power
 
 ### 3. Quality Gates
 All development follows strict quality criteria:
@@ -129,7 +131,7 @@ Every implementation includes:
 
 This power will automatically:
 1. Configure MCP servers for web search, documentation, and thinking tools
-2. Copy prompt templates to `.kiro/prompts/` in your workspace
+2. Copy all prompt template files from the power's `prompts/` directory to `.kiro/prompts/` in your workspace (preserving directory structure)
 3. Create project memory files in `.kiro/steering/project/`
 4. Load comprehensive steering rules for .NET development
 5. Enable structured workflows and quality gates
