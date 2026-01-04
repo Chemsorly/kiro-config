@@ -19,10 +19,10 @@ When this power activates, I'll help you set up a structured development environ
 - **Docker daemon must be running** - The MCP servers (web-search, context7, sequential-thinking) run as local Docker containers and require Docker to be available
 
 ### 1. Project Memory System
-I'll create and maintain project memory files in `.kiro/steering/project/`:
-- `memories.md` - Development history and decisions
-- `lessons-learned.md` - Reusable solutions and patterns  
-- `scratchpad.md` - Current session tracking
+I'll create and maintain project memory files in `steering/`:
+- `project-memories.md` - Development history and decisions
+- `project-lessons-learned.md` - Reusable solutions and patterns  
+- `project-scratchpad.md` - Current session tracking
 
 ### 2. Prompt Templates
 I'll fetch and copy prompt templates from the GitHub repository to your workspace's `.kiro/prompts/` directory:
@@ -63,23 +63,33 @@ Specialized knowledge for:
 ## Available Steering Files
 
 ### Core Rules
-- `acceptance-criteria.md` - Quality gates and completion requirements
-- `project-system.md` - Workflow and mode system for task execution
-- `security.md` - Security practices and validation requirements
-- `performance.md` - Optimization guidelines and resource management
-- `error-handling.md` - Standardized error handling across operations
+- `core-acceptance-criteria.md` - Quality gates and completion requirements
+- `core-project-system.md` - Workflow and mode system for task execution
+- `core-security.md` - Security practices and validation requirements
+- `core-performance.md` - Optimization guidelines and resource management
+- `core-error-handling.md` - Standardized error handling across operations
+- `core-conversation.md` - Communication and response guidelines
+- `core-documentation.md` - Documentation standards
+- `core-misc.md` - Miscellaneous development guidelines
+- `core-rule-hierarchy.md` - Rule precedence and conflict resolution
+- `core-tool-selection.md` - Tool selection criteria
 
 ### .NET Specific
-- `core.md` - .NET coding conventions and principles
-- `blazor.md` - Blazor component lifecycle and best practices
-- `testing.md` - Cross-platform testing requirements
-- `packages.md` - NuGet package evaluation criteria
-- `commands.md` - Standardized command formats
+- `languages-dotnet-core.md` - .NET coding conventions and principles
+- `languages-dotnet-blazor.md` - Blazor component lifecycle and best practices
+- `languages-dotnet-testing.md` - Cross-platform testing requirements
+- `languages-dotnet-packages.md` - NuGet package evaluation criteria
+- `languages-dotnet-commands.md` - Standardized command formats
 
 ### Workflows
-- `research-workflow.md` - Structured approach to investigating solutions
-- `implementation-workflow.md` - Quality-first development process
-- `debugging-workflow.md` - Systematic problem resolution
+- `workflows-research-workflow.md` - Structured approach to investigating solutions
+- `workflows-implementation-workflow.md` - Quality-first development process
+- `workflows-debugging-workflow.md` - Systematic problem resolution
+
+### Project Memory
+- `project-memories.md` - Development history and decisions
+- `project-lessons-learned.md` - Reusable solutions and patterns
+- `project-scratchpad.md` - Current session tracking
 
 ## Available Prompts
 
@@ -123,9 +133,9 @@ The power activates when you mention relevant keywords:
 
 ### Memory Management
 I automatically maintain project context:
-- Track development decisions in memories.md
-- Document lessons learned in lessons-leanred.md for future reference
-- Use scratchpad.md for session planning and progress
+- Track development decisions in project-memories.md
+- Document lessons learned in project-lessons-learned.md for future reference
+- Use project-scratchpad.md for session planning and progress
 
 ### Quality Assurance
 Every implementation includes:
@@ -133,14 +143,14 @@ Every implementation includes:
 - Cross-platform test execution (Windows/Linux)
 - Coverage analysis and threshold validation
 - Security and performance considerations
-- Check acceptance-criteria.md for full list
+- Check core-acceptance-criteria.md for full list
 
 ## Installation
 
 This power will automatically:
 1. Configure MCP servers for web search, documentation, and thinking tools
 2. Fetch all prompt template files from GitHub using the `fetch_content` tool and copy them to `.kiro/prompts/` in your workspace
-3. Create project memory files in `.kiro/steering/project/`
+3. Create project memory files in `steering/`
 4. Load comprehensive steering rules for .NET development
 5. Enable structured workflows and quality gates
 
