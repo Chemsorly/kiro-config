@@ -17,20 +17,8 @@ A comprehensive .NET development power for Kiro IDE that provides quality gates,
 - **Docker daemon must be running** - The MCP servers (web-search, context7, sequential-thinking) run as local Docker containers and require Docker to be available
 
 ## Installation
-
-### From Repository (Recommended)
-```bash
-# SSH
-kiro powers install git+ssh://git@github.com/chemsorly/kiro-config.git
-
-# HTTPS
-kiro powers install git+https://github.com/chemsorly/kiro-config.git
-```
-
-### From Local Directory (Development)
-```bash
-kiro powers install ./path/to/kiro-config-power
-```
+* Install via preferred power installation way (e.g. kiro IDE). 
+* Run "try this power" to execute onboarding process.
 
 ## What Gets Installed
 
@@ -41,11 +29,12 @@ When you install this power, it automatically:
    - Context7 documentation lookup
    - Sequential thinking for complex problems
 
-2. **Copies Prompt Templates** from the power's `prompts/` directory to `.kiro/prompts/` in your workspace:
-   - All repository analysis prompts from `prompts/01 intro/`
-   - All feature development workflows from `prompts/02 feature/` (research, plan, implement, debug)
-   - All validation prompts from `prompts/03 validation/`
-   - All cleanup prompts from `prompts/04 cleanup/`
+2. **Fetches Prompt Templates** from GitHub and copies them to `.kiro/prompts/` in your workspace:
+   - Downloads all prompt files from `https://github.com/chemsorly/kiro-config/tree/main/prompts/`
+   - Repository analysis prompts from `01 intro/`
+   - Feature development workflows from `02 feature/` (research, plan, implement, debug)
+   - Validation prompts from `03 validation/`
+   - Cleanup prompts from `04 cleanup/`
    - Preserves the exact directory structure
 
 3. **Creates Project Memory Files** (in `.kiro/steering/project/`):

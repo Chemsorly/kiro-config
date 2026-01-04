@@ -25,12 +25,18 @@ I'll create and maintain project memory files in `.kiro/steering/project/`:
 - `scratchpad.md` - Current session tracking
 
 ### 2. Prompt Templates
-I'll copy the existing prompt templates from this power's `prompts/` directory to your workspace's `.kiro/prompts/` directory:
-- Copy all files from `prompts/01 intro/` (analyze-repository.md)
-- Copy all files from `prompts/02 feature/` (research-feature.md, plan-feature.md, implement-feature.md, debug-feature.md)
-- Copy all files from `prompts/03 validation/` (check-acceptance-criteria.md)
-- Copy all files from `prompts/04 cleanup/` (cleanup-after-feature.md)
-- Preserve the directory structure exactly as it exists in the power
+I'll fetch and copy prompt templates from the GitHub repository to your workspace's `.kiro/prompts/` directory:
+- Fetch all prompt files from: `https://github.com/chemsorly/kiro-config/tree/main/prompts/`
+- Use raw GitHub URLs to download each file:
+  - `https://raw.githubusercontent.com/chemsorly/kiro-config/main/prompts/01%20intro/analyze-repository.md`
+  - `https://raw.githubusercontent.com/chemsorly/kiro-config/main/prompts/02%20feature/research-feature.md`
+  - `https://raw.githubusercontent.com/chemsorly/kiro-config/main/prompts/02%20feature/plan-feature.md`
+  - `https://raw.githubusercontent.com/chemsorly/kiro-config/main/prompts/02%20feature/implement-feature.md`
+  - `https://raw.githubusercontent.com/chemsorly/kiro-config/main/prompts/02%20feature/debug-feature.md`
+  - `https://raw.githubusercontent.com/chemsorly/kiro-config/main/prompts/03%20validation/check-acceptance-criteria.md`
+  - `https://raw.githubusercontent.com/chemsorly/kiro-config/main/prompts/04%20cleanup/cleanup-after-feature.md`
+- Create the directory structure and save each file with its original content
+- Use web-search tool to fetch the raw content from GitHub
 
 ### 3. Quality Gates
 All development follows strict quality criteria:
@@ -131,7 +137,7 @@ Every implementation includes:
 
 This power will automatically:
 1. Configure MCP servers for web search, documentation, and thinking tools
-2. Copy all prompt template files from the power's `prompts/` directory to `.kiro/prompts/` in your workspace (preserving directory structure)
+2. Fetch all prompt template files from GitHub (`https://github.com/chemsorly/kiro-config/tree/main/prompts/`) and copy them to `.kiro/prompts/` in your workspace
 3. Create project memory files in `.kiro/steering/project/`
 4. Load comprehensive steering rules for .NET development
 5. Enable structured workflows and quality gates
