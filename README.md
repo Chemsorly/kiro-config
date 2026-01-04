@@ -41,12 +41,17 @@ When you install this power, it automatically:
    - Context7 documentation lookup
    - Sequential thinking for complex problems
 
-2. **Creates Project Memory Files** (in `.kiro/steering/project/`):
+2. **Copies Prompt Templates** to `.kiro/prompts/`:
+   - Repository analysis prompts
+   - Feature development workflows (research, plan, implement, debug)
+   - Validation and cleanup prompts
+
+3. **Creates Project Memory Files** (in `.kiro/steering/project/`):
    - `memories.md` - Development history and decisions
    - `lessons-learned.md` - Reusable solutions and patterns
    - `scratchpad.md` - Session tracking and progress (MUST be used for all multi-step tasks)
 
-3. **Loads Comprehensive Steering Rules**:
+4. **Loads Comprehensive Steering Rules**:
    - Core rules (acceptance criteria, security, performance, tool selection, project system)
    - .NET specific guidance (Blazor, testing, packages, commands)
    - Structured workflows (research, implementation, debugging)

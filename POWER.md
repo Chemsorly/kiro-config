@@ -19,25 +19,31 @@ When this power activates, I'll help you set up a structured development environ
 - **Docker daemon must be running** - The MCP servers (web-search, context7, sequential-thinking) run as local Docker containers and require Docker to be available
 
 ### 1. Project Memory System
-I'll create and maintain project memory files:
+I'll create and maintain project memory files in `.kiro/steering/project/`:
 - `memories.md` - Development history and decisions
 - `lessons-learned.md` - Reusable solutions and patterns  
 - `scratchpad.md` - Current session tracking
 
-### 2. Quality Gates
+### 2. Prompt Templates
+I'll copy structured prompt templates to `.kiro/prompts/` for easy access:
+- Repository analysis prompts
+- Feature development workflows (research, plan, implement, debug)
+- Validation and cleanup prompts
+
+### 3. Quality Gates
 All development follows strict quality criteria:
 - Code must compile without warnings
 - Tests must pass on both Windows and Linux platforms
 - Coverage thresholds: 80-90% depending on complexity
 - Cross-platform compatibility validation
 
-### 3. Structured Workflows
+### 4. Structured Workflows
 I follow established workflows for:
 - **Research**: Documentation lookup and package evaluation
 - **Implementation**: Quality-first development with testing
 - **Debugging**: Systematic problem resolution
 
-### 4. .NET Expertise
+### 5. .NET Expertise
 Specialized knowledge for:
 - **Blazor Server**: Component lifecycle, JavaScript interop, accessibility
 - **C# Best Practices**: SOLID principles, async/await patterns, performance
@@ -123,8 +129,9 @@ Every implementation includes:
 
 This power will automatically:
 1. Configure MCP servers for web search, documentation, and thinking tools
-2. Create project memory files in `.kiro/steering/project/`
-3. Load comprehensive steering rules for .NET development
-4. Enable structured workflows and quality gates
+2. Copy prompt templates to `.kiro/prompts/` in your workspace
+3. Create project memory files in `.kiro/steering/project/`
+4. Load comprehensive steering rules for .NET development
+5. Enable structured workflows and quality gates
 
 Ready to build high-quality .NET applications with comprehensive AI assistance!
