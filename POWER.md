@@ -11,6 +11,32 @@ description: Comprehensive .NET development with quality gates, cross-platform t
 
 A comprehensive .NET development power that provides quality gates, cross-platform testing, project memory management, and structured workflows for Blazor and C# projects.
 
+## Auto-Loaded Steering Files
+
+When this power is activated, the following steering files are automatically loaded into context:
+
+#[[file:steering/core-acceptance-criteria.md]]
+#[[file:steering/core-conversation.md]]
+#[[file:steering/core-documentation.md]]
+#[[file:steering/core-error-handling.md]]
+#[[file:steering/core-misc.md]]
+#[[file:steering/core-performance.md]]
+#[[file:steering/core-project-system.md]]
+#[[file:steering/core-rule-hierarchy.md]]
+#[[file:steering/core-security.md]]
+#[[file:steering/core-tool-selection.md]]
+#[[file:steering/languages-dotnet-blazor.md]]
+#[[file:steering/languages-dotnet-commands.md]]
+#[[file:steering/languages-dotnet-core.md]]
+#[[file:steering/languages-dotnet-packages.md]]
+#[[file:steering/languages-dotnet-testing.md]]
+#[[file:steering/project-lessons-learned.md]]
+#[[file:steering/project-memories.md]]
+#[[file:steering/project-scratchpad.md]]
+#[[file:steering/workflows-debugging-workflow.md]]
+#[[file:steering/workflows-implementation-workflow.md]]
+#[[file:steering/workflows-research-workflow.md]]
+
 ## Onboarding
 
 When this power activates, I'll help you set up a structured development environment with:
