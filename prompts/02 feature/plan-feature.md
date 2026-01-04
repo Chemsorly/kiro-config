@@ -1,4 +1,4 @@
-We want to implement a new feature. The description will be at the end of the prompt.
+Activate the power "kiro-config" if not already done. We want to implement a new feature. The description will be at the end of the prompt.
 
 Repeat every step of the plan workflow in .kiro/steering/core/project-system.md and then follow it, running in plan mode.
 

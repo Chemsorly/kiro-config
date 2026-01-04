@@ -1,4 +1,4 @@
-You successfully planned the feature. Now implement it following the implementation workflow.
+Activate the power "kiro-config" if not already done. You successfully planned the feature. Now implement it following the implementation workflow.
 
 #implementation-workflow
 
