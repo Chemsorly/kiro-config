@@ -1,8 +1,10 @@
-Activate the power "kiro-config" if not already done. Ensure all steering documents of the power are loaded. You successfully planned the feature. Now implement it following the implementation workflow.
+Activate power "kiro-config" if needed. Verify steering files are loaded (check steeringFiles array in activation response). If not loaded, use action="readSteering". DO NOT create steering files - they already exist in the power.
 
-#implementation-workflow
+You successfully planned the feature. Now implement it following the implementation workflow.
 
-Repeat every step of the implementation workflow in .kiro/steering/workflows/implementation-workflow.md and then follow it.
+#workflows-implementation-workflow
+
+Follow the implementation workflow.
 
 Before you begin, verify you have 95%+ confidence. Ask questions if tasks are unclear.
 

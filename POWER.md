@@ -11,31 +11,34 @@ description: Comprehensive .NET development with quality gates, cross-platform t
 
 A comprehensive .NET development power that provides quality gates, cross-platform testing, project memory management, and structured workflows for Blazor and C# projects.
 
-## Auto-Loaded Steering Files
+## Steering Files
 
-When this power is activated, the following steering files are automatically loaded into context:
+This power includes comprehensive steering files that guide development. These files are stored in the `steering/` directory and should be accessed using the `readSteering` action when needed.
 
-#[[file:steering/core-acceptance-criteria.md]]
-#[[file:steering/core-conversation.md]]
-#[[file:steering/core-documentation.md]]
-#[[file:steering/core-error-handling.md]]
-#[[file:steering/core-misc.md]]
-#[[file:steering/core-performance.md]]
-#[[file:steering/core-project-system.md]]
-#[[file:steering/core-rule-hierarchy.md]]
-#[[file:steering/core-security.md]]
-#[[file:steering/core-tool-selection.md]]
-#[[file:steering/languages-dotnet-blazor.md]]
-#[[file:steering/languages-dotnet-commands.md]]
-#[[file:steering/languages-dotnet-core.md]]
-#[[file:steering/languages-dotnet-packages.md]]
-#[[file:steering/languages-dotnet-testing.md]]
-#[[file:steering/project-lessons-learned.md]]
-#[[file:steering/project-memories.md]]
-#[[file:steering/project-scratchpad.md]]
-#[[file:steering/workflows-debugging-workflow.md]]
-#[[file:steering/workflows-implementation-workflow.md]]
-#[[file:steering/workflows-research-workflow.md]]
+**IMPORTANT**: During onboarding, DO NOT create these files - they already exist in the power's `steering/` directory. Use `action="readSteering"` with `powerName="kiro-config"` and the appropriate `steeringFile` name to load them.
+
+Available steering files:
+- `core-acceptance-criteria.md` - Quality gates and completion requirements
+- `core-conversation.md` - Communication and response guidelines
+- `core-documentation.md` - Documentation standards
+- `core-error-handling.md` - Standardized error handling
+- `core-misc.md` - Miscellaneous development guidelines
+- `core-performance.md` - Optimization guidelines
+- `core-project-system.md` - Workflow and mode system
+- `core-rule-hierarchy.md` - Rule precedence and conflict resolution
+- `core-security.md` - Security practices
+- `core-tool-selection.md` - Tool selection criteria
+- `languages-dotnet-blazor.md` - Blazor best practices
+- `languages-dotnet-commands.md` - Standardized command formats
+- `languages-dotnet-core.md` - .NET coding conventions
+- `languages-dotnet-packages.md` - NuGet package evaluation
+- `languages-dotnet-testing.md` - Cross-platform testing
+- `project-lessons-learned.md` - Reusable solutions and patterns
+- `project-memories.md` - Development history and decisions
+- `project-scratchpad.md` - Current session tracking
+- `workflows-debugging-workflow.md` - Systematic problem resolution
+- `workflows-implementation-workflow.md` - Quality-first development
+- `workflows-research-workflow.md` - Structured research approach
 
 ## Onboarding
 
@@ -44,13 +47,24 @@ When this power activates, I'll help you set up a structured development environ
 ### Prerequisites
 - **Docker daemon must be running** - The MCP servers (web-search, context7, sequential-thinking) run as local Docker containers and require Docker to be available
 
-### 1. Project Memory System
-I'll create and maintain project memory files in `steering/`:
+### 1. Load Steering Files
+**CRITICAL**: The steering files already exist in this power's `steering/` directory. During onboarding:
+- DO NOT create new steering files
+- DO NOT use fsWrite or fsAppend to create steering files
+- USE `action="readSteering"` with `powerName="kiro-config"` to load existing files
+- Example: `kiroPowers(action="readSteering", powerName="kiro-config", steeringFile="core-acceptance-criteria.md")`
+
+The steering files provide all development guidelines, workflows, and quality gates needed for .NET development.
+
+### 2. Project Memory System (User Workspace)
+I'll create and maintain project memory files in the USER'S workspace `.kiro/steering/` directory (NOT in the power's directory):
 - `project-memories.md` - Development history and decisions
 - `project-lessons-learned.md` - Reusable solutions and patterns  
 - `project-scratchpad.md` - Current session tracking
 
-### 2. Prompt Templates
+These files are specific to the user's project and should be created fresh for each project.
+
+### 3. Prompt Templates
 I'll fetch and copy prompt templates from the GitHub repository to your workspace's `.kiro/prompts/` directory:
 - Use the `fetch_content` tool from the web-search MCP server to download each file
 - Fetch all prompt files using raw GitHub URLs:
@@ -66,56 +80,25 @@ I'll fetch and copy prompt templates from the GitHub repository to your workspac
 - When writing files, add appropriate line breaks between paragraphs and sections to restore proper formatting
 - Ensure the files are readable with proper paragraph separation
 
-### 3. Quality Gates
+### 4. Quality Gates
 All development follows strict quality criteria:
 - Code must compile without warnings
 - Tests must pass on both Windows and Linux platforms
 - Coverage thresholds: 80-90% depending on complexity
 - Cross-platform compatibility validation
 
-### 4. Structured Workflows
+### 5. Structured Workflows
 I follow established workflows for:
 - **Research**: Documentation lookup and package evaluation
 - **Implementation**: Quality-first development with testing
 - **Debugging**: Systematic problem resolution
 
-### 5. .NET Expertise
+### 6. .NET Expertise
 Specialized knowledge for:
 - **Blazor Server**: Component lifecycle, JavaScript interop, accessibility
 - **C# Best Practices**: SOLID principles, async/await patterns, performance
 - **Cross-Platform**: Windows/Linux testing with Docker containers
 - **Package Management**: NuGet evaluation with confidence scoring
-
-## Available Steering Files
-
-### Core Rules
-- `core-acceptance-criteria.md` - Quality gates and completion requirements
-- `core-project-system.md` - Workflow and mode system for task execution
-- `core-security.md` - Security practices and validation requirements
-- `core-performance.md` - Optimization guidelines and resource management
-- `core-error-handling.md` - Standardized error handling across operations
-- `core-conversation.md` - Communication and response guidelines
-- `core-documentation.md` - Documentation standards
-- `core-misc.md` - Miscellaneous development guidelines
-- `core-rule-hierarchy.md` - Rule precedence and conflict resolution
-- `core-tool-selection.md` - Tool selection criteria
-
-### .NET Specific
-- `languages-dotnet-core.md` - .NET coding conventions and principles
-- `languages-dotnet-blazor.md` - Blazor component lifecycle and best practices
-- `languages-dotnet-testing.md` - Cross-platform testing requirements
-- `languages-dotnet-packages.md` - NuGet package evaluation criteria
-- `languages-dotnet-commands.md` - Standardized command formats
-
-### Workflows
-- `workflows-research-workflow.md` - Structured approach to investigating solutions
-- `workflows-implementation-workflow.md` - Quality-first development process
-- `workflows-debugging-workflow.md` - Systematic problem resolution
-
-### Project Memory
-- `project-memories.md` - Development history and decisions
-- `project-lessons-learned.md` - Reusable solutions and patterns
-- `project-scratchpad.md` - Current session tracking
 
 ## Available Prompts
 

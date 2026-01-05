@@ -1,7 +1,9 @@
-Activate the power "kiro-config" if not already done. Ensure all steering documents of the power are loaded. We need to debug an issue with a feature. The issue description will be at the end of the prompt. Follow the debugging workflow to analyze and fix the problem.
+Activate power "kiro-config" if needed. Verify steering files are loaded (check steeringFiles array in activation response). If not loaded, use action="readSteering". DO NOT create steering files - they already exist in the power.
 
-#debugging-workflow
+We need to debug an issue with a feature. The issue description will be at the end of the prompt. Follow the debugging workflow to analyze and fix the problem.
 
-Repeat every step of the debugging workflow in .kiro/steering/workflows/debugging-workflow.md and then follow it.
+#workflows-debugging-workflow
+
+Follow the debugging workflow to analyze and fix the problem.
 
 Provide confidence level and ask questions if the issue is unclear.

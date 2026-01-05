@@ -1,1 +1,3 @@
-Activate the power "kiro-config" if not already done. Ensure all steering documents of the power are loaded. You implemented a feature and all acceptance criteria are met. Now clean up. Tasks include removing temporary files, cleaning up the scratchpad, adding documentation, adding memories and adding lessons learned. The goal is to have the repository in a state that can be committed.
+Activate power "kiro-config" if needed. Verify steering files are loaded (check steeringFiles array in activation response). If not loaded, use action="readSteering". DO NOT create steering files - they already exist in the power.
+
+You implemented a feature and all acceptance criteria are met. Now clean up. Tasks include removing temporary files, cleaning up the scratchpad, adding documentation, adding memories and adding lessons learned. The goal is to have the repository in a state that can be committed.
