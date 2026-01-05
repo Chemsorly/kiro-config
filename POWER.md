@@ -40,65 +40,149 @@ Available steering files:
 - `workflows-implementation-workflow.md` - Quality-first development
 - `workflows-research-workflow.md` - Structured research approach
 
-## Onboarding
+## Onboarding Checklist
 
-When this power activates, I'll help you set up a structured development environment with:
+**Complete ALL three tasks below.** Order doesn't matter, but nothing should be skipped.
 
-### Prerequisites
-- **Docker daemon must be running** - The MCP servers (web-search, context7, sequential-thinking) run as local Docker containers and require Docker to be available
+⚠️ **Skipping any task will result in incomplete power activation and incorrect behavior.**
 
-### 1. Load Steering Files
-**CRITICAL**: The steering files already exist in this power's `steering/` directory. During onboarding:
-- DO NOT create new steering files
-- DO NOT use fsWrite or fsAppend to create steering files
-- USE `action="readSteering"` with `powerName="kiro-config"` to load existing files
-- Example: `kiroPowers(action="readSteering", powerName="kiro-config", steeringFile="core-acceptance-criteria.md")`
+### Prerequisites Check
+- **Docker daemon must be running** - Required for MCP servers (web-search, context7, sequential-thinking)
+- **Action**: Verify Docker is available or ask user to confirm before proceeding
 
-The steering files provide all development guidelines, workflows, and quality gates needed for .NET development.
+---
 
-### 2. Project Memory System (User Workspace)
-I'll create and maintain project memory files in the USER'S workspace `.kiro/steering/` directory (NOT in the power's directory):
-- `project-memories.md` - Development history and decisions
-- `project-lessons-learned.md` - Reusable solutions and patterns  
-- `project-scratchpad.md` - Current session tracking
+### Task 1: Load Steering Files (19 total) ☐
 
-These files are specific to the user's project and should be created fresh for each project.
+**Why this matters**: These files contain quality gates, workflows, and development rules. Skipping any file means missing critical guidance.
 
-### 3. Prompt Templates
-I'll fetch and copy prompt templates from the GitHub repository to your workspace's `.kiro/prompts/` directory:
-- Use the `fetch_content` tool from the web-search MCP server to download each file
-- Fetch all prompt files using raw GitHub URLs:
-  - `https://raw.githubusercontent.com/chemsorly/kiro-config/main/prompts/01%20intro/analyze-repository.md`
-  - `https://raw.githubusercontent.com/chemsorly/kiro-config/main/prompts/02%20feature/research-feature.md`
-  - `https://raw.githubusercontent.com/chemsorly/kiro-config/main/prompts/02%20feature/plan-feature.md`
-  - `https://raw.githubusercontent.com/chemsorly/kiro-config/main/prompts/02%20feature/implement-feature.md`
-  - `https://raw.githubusercontent.com/chemsorly/kiro-config/main/prompts/02%20feature/debug-feature.md`
-  - `https://raw.githubusercontent.com/chemsorly/kiro-config/main/prompts/03%20validation/check-acceptance-criteria.md`
-  - `https://raw.githubusercontent.com/chemsorly/kiro-config/main/prompts/04%20cleanup/cleanup-after-feature.md`
-- Create the directory structure (`.kiro/prompts/01 intro/`, `.kiro/prompts/02 feature/`, etc.)
-- IMPORTANT: The `fetch_content` tool omits line breaks from the content
-- When writing files, add appropriate line breaks between paragraphs and sections to restore proper formatting
-- Ensure the files are readable with proper paragraph separation
+**CRITICAL**: 
+- Steering files already exist in the power's `steering/` directory
+- DO NOT create new steering files with fsWrite/fsAppend
+- USE `action="readSteering"` with `powerName="kiro-config"` for each file
 
-### 4. Quality Gates
-All development follows strict quality criteria:
-- Code must compile without warnings
-- Tests must pass on both Windows and Linux platforms
-- Coverage thresholds: 80-90% depending on complexity
-- Cross-platform compatibility validation
+**Files to Load:**
 
-### 5. Structured Workflows
-I follow established workflows for:
-- **Research**: Documentation lookup and package evaluation
-- **Implementation**: Quality-first development with testing
-- **Debugging**: Systematic problem resolution
+**Core Rules (10 files):**
+- core-acceptance-criteria.md
+- core-conversation.md
+- core-documentation.md
+- core-error-handling.md
+- core-misc.md
+- core-performance.md
+- core-project-system.md
+- core-rule-hierarchy.md
+- core-security.md
+- core-tool-selection.md
 
-### 6. .NET Expertise
-Specialized knowledge for:
-- **Blazor Server**: Component lifecycle, JavaScript interop, accessibility
-- **C# Best Practices**: SOLID principles, async/await patterns, performance
-- **Cross-Platform**: Windows/Linux testing with Docker containers
-- **Package Management**: NuGet evaluation with confidence scoring
+**.NET Language Rules (5 files):**
+- languages-dotnet-blazor.md
+- languages-dotnet-commands.md
+- languages-dotnet-core.md
+- languages-dotnet-packages.md
+- languages-dotnet-testing.md
+
+**Workflow Rules (3 files):**
+- workflows-debugging-workflow.md
+- workflows-implementation-workflow.md
+- workflows-research-workflow.md
+
+**Tool Call Example:**
+```javascript
+kiroPowers(action="readSteering", powerName="kiro-config", steeringFile="core-acceptance-criteria.md")
+// Repeat for all 19 files
+```
+
+**✓ Verify**: Loaded 10 core + 5 dotnet + 3 workflows = 19 total files
+
+---
+
+### Task 2: Create Project Memory Files (3 total) ☐
+
+**Why this matters**: These files track project-specific decisions and lessons, enabling context continuity across sessions.
+
+**IMPORTANT**: Create these in the USER'S workspace at `.kiro/steering/` (NOT in the power's directory)
+
+**Files to Create:**
+1. `project-memories.md` - Development history and architectural decisions
+2. `project-lessons-learned.md` - Reusable solutions and patterns discovered
+3. `project-scratchpad.md` - Current session goals and progress tracking
+
+**Tool Call Example:**
+```javascript
+fsWrite(path=".kiro/steering/project-memories.md", text="# Project Memories\n\nThis file tracks important development decisions and context.\n\n## Project Overview\n- **Created**: [Date]\n- **Type**: [TBD]\n\n## Key Decisions\n[To be documented]\n")
+// Repeat for other 2 files with appropriate headers
+```
+
+**✓ Verify**: Created all 3 files in user's `.kiro/steering/` directory
+
+---
+
+### Task 3: Install Prompt Templates (7 total) ☐
+
+**Why this matters**: These templates provide structured workflows for common development tasks.
+
+**Process**:
+1. Use `fetch_content` tool (web-search MCP server) to download from GitHub
+2. Use `fsWrite` to save in `.kiro/prompts/` (directories created automatically)
+
+⚠️ **CRITICAL**: The `fetch_content` tool removes line breaks. Add proper paragraph separation when writing files.
+
+**Files to Install:**
+
+**GitHub Base**: `https://raw.githubusercontent.com/chemsorly/kiro-config/main/prompts/`
+
+1. `01 intro/analyze-repository.md` → `.kiro/prompts/01 intro/analyze-repository.md`
+2. `02 feature/research-feature.md` → `.kiro/prompts/02 feature/research-feature.md`
+3. `02 feature/plan-feature.md` → `.kiro/prompts/02 feature/plan-feature.md`
+4. `02 feature/implement-feature.md` → `.kiro/prompts/02 feature/implement-feature.md`
+5. `02 feature/debug-feature.md` → `.kiro/prompts/02 feature/debug-feature.md`
+6. `03 validation/check-acceptance-criteria.md` → `.kiro/prompts/03 validation/check-acceptance-criteria.md`
+7. `04 cleanup/cleanup-after-feature.md` → `.kiro/prompts/04 cleanup/cleanup-after-feature.md`
+
+**Tool Call Example:**
+```javascript
+kiroPowers(action="use", powerName="kiro-config", serverName="web-search", toolName="fetch_content", 
+  arguments={"url": "https://raw.githubusercontent.com/chemsorly/kiro-config/main/prompts/01%20intro/analyze-repository.md"})
+// Then write with proper line breaks
+fsWrite(path=".kiro/prompts/01 intro/analyze-repository.md", text="[content with line breaks added]")
+```
+
+**✓ Verify**: Installed all 7 files with proper formatting (not wall of text)
+
+---
+
+## Final Validation Checklist
+
+⚠️ **CRITICAL CHECKPOINT**: Before declaring onboarding complete, verify ALL items:
+
+- [ ] Loaded 19 steering files (10 core + 5 dotnet + 3 workflows)
+- [ ] Created 3 project memory files in `.kiro/steering/`
+- [ ] Installed 7 prompt template files in `.kiro/prompts/`
+- [ ] Updated project-scratchpad.md with onboarding completion status
+
+**If ANY checkbox is unchecked, onboarding is NOT complete. Return to incomplete tasks.**
+
+---
+
+### Report Completion to User
+
+Once all checkboxes are verified, report:
+
+```
+✅ Kiro-Config Power: Onboarding Complete
+
+Successfully completed:
+- Loaded 19 steering files (core rules, .NET rules, workflows)
+- Created 3 project memory files
+- Installed 7 prompt templates
+
+The kiro-config power is now fully operational with:
+- Quality gates (no warnings, 80-90% coverage, cross-platform testing)
+- Structured workflows (research → implementation → debugging)
+- Project memory system (tracking decisions and lessons)
+- Blazor & C# expertise with best practices
+```
 
 ## Available Prompts
 
@@ -154,13 +238,25 @@ Every implementation includes:
 - Security and performance considerations
 - Check core-acceptance-criteria.md for full list
 
-## Installation
+## What Happens After Onboarding
 
-This power will automatically:
-1. Configure MCP servers for web search, documentation, and thinking tools
-2. Fetch all prompt template files from GitHub using the `fetch_content` tool and copy them to `.kiro/prompts/` in your workspace
-3. Create project memory files in `steering/`
-4. Load comprehensive steering rules for .NET development
-5. Enable structured workflows and quality gates
+Once onboarding is complete, this power provides:
+
+**Quality Gates**: All development follows strict criteria:
+- Code must compile without warnings
+- Tests must pass on both Windows and Linux platforms
+- Coverage thresholds: 80-90% depending on complexity
+- Cross-platform compatibility validation
+
+**Structured Workflows**:
+- **Research**: Documentation lookup and package evaluation
+- **Implementation**: Quality-first development with testing
+- **Debugging**: Systematic problem resolution
+
+**.NET Expertise**:
+- **Blazor Server**: Component lifecycle, JavaScript interop, accessibility
+- **C# Best Practices**: SOLID principles, async/await patterns, performance
+- **Cross-Platform**: Windows/Linux testing with Docker containers
+- **Package Management**: NuGet evaluation with confidence scoring
 
 Ready to build high-quality .NET applications with comprehensive AI assistance!
